@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int playerScore { get; private set; }
-    public int computerScore { get; private set; }
+    private int playerScore { get; set; }
+    private int computerScore { get; set; }
 
     [SerializeField] private Ball ball;
     [SerializeField] private Paddle playerPaddle;
@@ -12,14 +12,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text playerScoreText;
     [SerializeField] private Text computerScoreText;
 
-    private void Start()
+    void Start()
     {
         NewGame();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R)) 
+        {
             NewGame();
         }
     }
@@ -69,5 +70,4 @@ public class GameManager : MonoBehaviour
         computerScore = score;
         computerScoreText.text = score.ToString();
     }
-
 }

@@ -2,8 +2,7 @@
 
 public class ComputerPaddle : Paddle
 {
-    [SerializeField]
-    private Rigidbody2D ball;
+    [SerializeField] private Rigidbody2D ball;
 
     private void FixedUpdate()
     {
@@ -29,5 +28,4 @@ public class ComputerPaddle : Paddle
             }
         }
     }
-
 }

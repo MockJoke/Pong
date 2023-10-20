@@ -3,14 +3,14 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class Paddle : MonoBehaviour
 {
-    public new Rigidbody2D rigidbody { get; private set; }
+    protected new Rigidbody2D rigidbody { get; private set; }
 
     public float speed = 8f;
 
     [Tooltip("Changes how the ball bounces off the paddle depending on where it hits the paddle. The further from the center of the paddle, the steeper the bounce angle.")]
     public bool useDynamicBounce = false;
 
-    private void Awake()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -44,5 +44,4 @@ public abstract class Paddle : MonoBehaviour
             ball.velocity = ballDirection * ball.velocity.magnitude;
         }
     }
-
 }
