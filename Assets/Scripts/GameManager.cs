@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     private int playerScore { get; set; }
     private int computerScore { get; set; }
-
+    
     [SerializeField] private Ball ball;
     [SerializeField] private Paddle playerPaddle;
     [SerializeField] private Paddle computerPaddle;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NewGame()
+    private void NewGame()
     {
         SetPlayerScore(0);
         SetComputerScore(0);
