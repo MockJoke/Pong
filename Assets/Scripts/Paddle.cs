@@ -44,5 +44,4 @@ public abstract class Paddle : MonoBehaviour
             ball.velocity = ballDirection * ball.velocity.magnitude;
         }
     }
-
 }

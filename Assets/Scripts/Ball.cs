@@ -43,5 +43,4 @@ public class Ball : MonoBehaviour
         currentSpeed = Mathf.Min(currentSpeed, maxSpeed);
         rigidbody.velocity = direction * currentSpeed;
     }
-
 }

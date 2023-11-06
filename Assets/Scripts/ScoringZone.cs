@@ -10,9 +10,9 @@ public class ScoringZone : MonoBehaviour
     {
         Ball ball = collision.gameObject.GetComponent<Ball>();
 
-        if (ball != null) {
+        if (ball != null) 
+        {
             scoreTrigger.Invoke();
         }
     }
-
 }

@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R)) 
+        {
             NewGame();
         }
     }
@@ -69,5 +70,4 @@ public class GameManager : MonoBehaviour
         computerScore = score;
         computerScoreText.text = score.ToString();
     }
-
 }
