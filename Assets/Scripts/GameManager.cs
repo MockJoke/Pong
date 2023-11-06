@@ -3,16 +3,16 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int playerScore { get; private set; }
-    public int computerScore { get; private set; }
-
+    private int playerScore { get; set; }
+    private int computerScore { get; set; }
+    
     [SerializeField] private Ball ball;
     [SerializeField] private Paddle playerPaddle;
     [SerializeField] private Paddle computerPaddle;
     [SerializeField] private Text playerScoreText;
     [SerializeField] private Text computerScoreText;
 
-    private void Start()
+    void Start()
     {
         NewGame();
     }
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void NewGame()
+    private void NewGame()
     {
         SetPlayerScore(0);
         SetComputerScore(0);

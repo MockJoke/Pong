@@ -3,13 +3,13 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class Ball : MonoBehaviour
 {
-    public new Rigidbody2D rigidbody { get; private set; }
+    private new Rigidbody2D rigidbody { get; set; }
 
-    public float baseSpeed = 5f;
-    public float maxSpeed = Mathf.Infinity;
+    [SerializeField] private float baseSpeed = 5f;
+    [SerializeField] private float maxSpeed = Mathf.Infinity;
     public float currentSpeed { get; set; }
 
-    private void Awake()
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
     }

@@ -2,7 +2,7 @@
 
 public class PlayerPaddle : Paddle
 {
-    public Vector2 direction { get; private set; }
+    private Vector2 direction { get; set; }
 
     private void Update()
     {
